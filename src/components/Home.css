@@ -109,7 +109,7 @@
   height: 60vh;
   border-radius: 8px;
   margin-right: 4vw;
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
 }
 
 /* home left */
@@ -241,7 +241,11 @@
   border: 1px solid #2e8644;
 }
 
-.mobileStoryboard{
+.mobileStoryboard {
+  display: none;
+}
+
+.mobilepreview1 {
   display: none;
 }
 
@@ -258,9 +262,20 @@
     margin-left: 40px;
   }
 
-  .mobilepreview {
+  .mobilepreview1 {
+    display: unset;
     margin-top: 20px;
     margin-left: 100px;
+
+    background: #55897c;
+    color: white;
+    width: 150px;
+
+    /* margin-right: 80px; */
+    /* margin-left: 80px; */
+    /* margin-top: 60px; */
+    /* margin-left: 40px; */
+
   }
 
   .searchInput {
@@ -292,12 +307,12 @@
   }
 
   .addbutton {
-    transform: scale(.8);
+    transform: scale(.7);
     margin-bottom: 4px;
     margin-top: -8px;
   }
 
-  .mobileStoryboard{
+  .mobileStoryboard {
 
     display: unset;
 
@@ -311,7 +326,7 @@
     align-items: center;
 
     overflow-x: scroll;
-    
+
   }
 
   /* .boardImage{
@@ -322,7 +337,7 @@
     border-radius: 8px;
   } */
 
-  .boardImage1{
+  .boardImage1 {
     /* width: 8vw; */
     height: 70px;
     width: 70px;

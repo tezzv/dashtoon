@@ -53,8 +53,9 @@ code {
   color: white;
   width: 150px;
 
-  margin-right: 80px;
+  /* margin-right: 80px; */
   margin-top: 60px;
+  margin-left: 40px;
 }
 
 .previwbtn:hover {
@@ -77,9 +78,6 @@ code {
 
 @media (max-width: 768px) {
 
-  .homeLeft{
-    
-  }
 
 
   .homeright{
@@ -95,7 +93,4 @@ code {
     width: 100px;
     height: 100px;
   }
-
-  
-
 }

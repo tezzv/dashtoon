@@ -132,7 +132,7 @@ const Home = () => {
 
                 </div>
 
-                {allimages.length > 0 && <Link to='/story' className='btn previwbtn mobilepreview'>Preview</Link>}
+                {allimages.length > 0 && <Link to='/story' className='btn  mobilepreview1'>Preview</Link>}
 
             </div>
         </>
