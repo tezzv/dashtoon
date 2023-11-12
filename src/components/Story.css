@@ -22,8 +22,19 @@
     margin-top: -6px;
 }
 
-.boardImage{
+.boardImage {
     width: 8vw;
     padding: 4px;
     border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+    .boardImage {
+        height: 70px;
+        width: 70px;
+        padding: 4px;
+        border-radius: 8px;
+        /* background: white; */
+        margin-left: 4px;
+    }
 }

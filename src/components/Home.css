@@ -45,6 +45,7 @@
   font-size: 15px;
   padding: 24px 46px 24px 26px;
   width: 100%;
+  height: auto;
 }
 
 /* generate btn */
@@ -102,6 +103,15 @@
   margin-top: 40px;
 }
 
+.homeright {
+  width: 20vw;
+  background: white;
+  height: 60vh;
+  border-radius: 8px;
+  margin-right: 4vw;
+  overflow-y: scroll;
+}
+
 /* home left */
 .homeLeft {
   width: 65vw;
@@ -117,45 +127,44 @@
 
 
   /* background */
-  --s: 194px; /* control the size */
+  --s: 194px;
+  /* control the size */
 
- --c1: #f6edb3;
+  --c1: #f6edb3;
 
- --c2: #acc4a3;
-
-
-
- --_l: #0000 calc(25% / 3), var(--c1) 0 25%, #0000 0;
-
- --_g: conic-gradient(from 120deg at 50% 87.5%, var(--c1) 120deg, #0000 0);
+  --c2: #acc4a3;
 
 
 
- background: var(--_g), var(--_g) 0 calc(var(--s) / 2),
+  --_l: #0000 calc(25% / 3), var(--c1) 0 25%, #0000 0;
 
-  conic-gradient(from 180deg at 75%, var(--c2) 60deg, #0000 0),
+  --_g: conic-gradient(from 120deg at 50% 87.5%, var(--c1) 120deg, #0000 0);
 
-  conic-gradient(from 60deg at 75% 75%, var(--c1) 0 60deg, #0000 0),
 
-  linear-gradient(150deg, var(--_l)) 0 calc(var(--s) / 2),
 
-  conic-gradient(
+  background: var(--_g), var(--_g) 0 calc(var(--s) / 2),
 
-   at 25% 25%,
+    conic-gradient(from 180deg at 75%, var(--c2) 60deg, #0000 0),
 
-   #0000 50%,
+    conic-gradient(from 60deg at 75% 75%, var(--c1) 0 60deg, #0000 0),
 
-   var(--c2) 0 240deg,
+    linear-gradient(150deg, var(--_l)) 0 calc(var(--s) / 2),
 
-   var(--c1) 0 300deg,
+    conic-gradient(at 25% 25%,
 
-   var(--c2) 0
+      #0000 50%,
 
-  ),
+      var(--c2) 0 240deg,
 
-  linear-gradient(-150deg, var(--_l)) #55897c /* third color here */;
+      var(--c1) 0 300deg,
 
- background-size: calc(0.866 * var(--s)) var(--s);
+      var(--c2) 0),
+
+    linear-gradient(-150deg, var(--_l)) #55897c
+    /* third color here */
+  ;
+
+  background-size: calc(0.866 * var(--s)) var(--s);
 }
 
 .genImg {
@@ -181,7 +190,9 @@
   margin-bottom: 20px;
 }
 
-.addbutton, .button__icon, .button__text {
+.addbutton,
+.button__icon,
+.button__text {
   transition: all 0.3s;
 }
 
@@ -228,4 +239,97 @@
 
 .addbutton:active {
   border: 1px solid #2e8644;
+}
+
+.mobileStoryboard{
+  display: none;
+}
+
+
+
+@media (max-width: 768px) {
+  .home {
+    flex-direction: column;
+  }
+
+  .homeLeft {
+    height: 45vh;
+    width: 80vw;
+    margin-left: 40px;
+  }
+
+  .mobilepreview {
+    margin-left: 100px;
+  }
+
+  .searchInput {
+    height: 30px;
+    width: 300px;
+  }
+
+  .btn1 {
+    /* height: 200px !important; */
+    transform: scale(.8);
+  }
+
+  .btn1 svg {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  .searchBox {
+    width: 275px;
+    height: 50px;
+
+    flex-direction: column;
+  }
+
+  .genImg {
+    width: 160px;
+    margin-top: -40px;
+    margin-bottom: 20px;
+  }
+
+  .addbutton {
+    transform: scale(.8);
+    margin-bottom: 4px;
+    margin-top: -8px;
+  }
+
+  .mobileStoryboard{
+
+    display: unset;
+
+    width: 90vw;
+    height: 80px;
+    background: #6c757d;
+    margin-bottom: 40px;
+    margin-left: 20px;
+
+    display: flex;
+    align-items: center;
+
+    overflow-x: scroll;
+    
+  }
+
+  /* .boardImage{
+    height: 70px;
+    width: 70px;
+    padding: 4px;
+    
+    border-radius: 8px;
+  } */
+
+  .boardImage1{
+    /* width: 8vw; */
+    height: 70px;
+    width: 70px;
+    padding: 4px;
+    border-radius: 8px;
+    background: white;
+    margin-left: 4px;
+  }
+
+
 }

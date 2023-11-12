@@ -23,12 +23,12 @@ const StoryBoard = () => {
         <>
             <div>
                 <div className='headBoard'>
-                    <p style={{marginTop: '10px'}}>
+                    <p >
                         Story Board
                     </p>
                 </div>
                 <div className='homeRight'>
-                    <div style={{ marginTop: '40px', display: 'flex', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '8px' }}>
+                    <div className='storyboardimg' >
 
                         {allimages.length > 0 && allimages.map((item, index) => {
                             // console.log(item)

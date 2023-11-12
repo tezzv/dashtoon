@@ -61,4 +61,17 @@
       transform: rotate(25deg)
     }
   }
-    
+  @media (max-width: 768px) {
+    /* .loader{
+      transform: scale(.5);
+
+    }
+
+    .loader:before{
+      transform: scale(.5);
+    }
+
+    .loader:after{
+      transform: scale(.5);
+    } */
+  }

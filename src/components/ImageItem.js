@@ -1,5 +1,7 @@
 import React, { useContext } from 'react';
 import storyContext from '../context/story/storyContext';
+// import './Home.css'
+import './Story.css'
 
 const ImageItem = (props) => {
     const context = useContext(storyContext);

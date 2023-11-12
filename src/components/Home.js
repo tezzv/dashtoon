@@ -4,6 +4,8 @@ import './Home.css';
 import './Loader.css'
 import StoryBoard from './StoryBoard';
 import { Link } from 'react-router-dom';
+import ImageItem from './ImageItem';
+import addImageicon from './images/addImageIcon.png'
 
 const Home = () => {
     const context = useContext(storyContext);
@@ -40,9 +42,43 @@ const Home = () => {
         }
     }
 
+    const manupulateHandler = () => {
+        setresultimg()
+        setGlobalIndex()
+        setGlobalIndex()
+
+        // console.log(props.index)
+        // console.log('global')
+        // console.log('global',  globalIndex)
+    }
+
     return (
         <>
             <div className='home'>
+
+                <div className='mobileStoryboard'>
+
+                    {allimages.length > 0 && allimages.map((item, index) => {
+                        // console.log(item)
+                        return (
+                            // <img className='boardImage' src={item.resultimg} title={item.inputs} alt='imag' />
+                            <ImageItem source={item.resultimg} name={item.inputs} index={index} />
+                        )
+                    })}
+
+                    <img src={addImageicon} onClick={manupulateHandler} className='boardImage1'
+                        style={{
+                            cursor: 'pointer',
+                            border: globalIndex == null ? '2px solid #55897c' : 'none',
+                        }}
+                        alt=''
+                        title='add new image'
+                    />
+
+                </div>
+
+
+
                 <div className='homeLeft'>
                     {!loader && resultimg && <img className='genImg' src={resultimg} alt='genImg' title={inputs} />}
 
@@ -59,7 +95,7 @@ const Home = () => {
 
                             <input className="searchInput" type="text" onChange={onChangeHandler} name="genImage" placeholder="Write your prompt here..." />
                             <button className="btn1" type='submit'
-                                disabled= {inputs == null ? 'true' : ''}
+                                disabled={inputs == null ? 'true' : ''}
                             >
 
                                 <svg height="24" width="24" fill="#FFFFFF" viewBox="0 0 24 24" data-name="Layer 1" id="Layer_1" className="sparkle">
@@ -73,7 +109,7 @@ const Home = () => {
                     }
 
                     {loader &&
-                        <div style={{ width: '60%', height: '160px', background: '#312e2e', borderRadius: '6px', display: 'flex', alignItems: 'center', }}>
+                        <div className='loaderh' style={{ width: '60%', height: '160px', background: '#312e2e', borderRadius: '6px', display: 'flex', alignItems: 'center', }}>
                             <div style={{ marginLeft: '20px' }}>
                                 <div className="loader"></div>
                             </div>
@@ -89,12 +125,14 @@ const Home = () => {
                 </div>
 
 
-                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                <div className='homeright'>
                     <StoryBoard />
                     {/* <Link to='/preview'>Preview</Link> */}
                     {allimages.length > 0 && <Link to='/story' className='btn previwbtn'>Preview</Link>}
 
                 </div>
+
+                {allimages.length > 0 && <Link to='/story' className='btn previwbtn mobilepreview'>Preview</Link>}
 
             </div>
         </>
