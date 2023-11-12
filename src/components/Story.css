@@ -28,6 +28,13 @@
     border-radius: 8px;
 }
 
+.storyNav{
+    display: flex;
+    width: 100vw;
+    justify-content: space-around;
+}
+
+
 @media (max-width: 768px) {
     .boardImage {
         height: 70px;
@@ -37,4 +44,9 @@
         /* background: white; */
         margin-left: 4px;
     }
+
+    .storyNav{
+        transform: scale(.9);
+    }
+
 }

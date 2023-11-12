@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import storyContext from '../context/story/storyContext';
 import ImageItem from './ImageItem';
 import addImageicon from './images/addImageIcon.png'
+import './Story.css'
 
 
 
@@ -29,7 +30,6 @@ const StoryBoard = () => {
                 </div>
                 <div className='homeRight'>
                     <div className='storyboardimg' >
-
                         {allimages.length > 0 && allimages.map((item, index) => {
                             // console.log(item)
                             return (
@@ -46,7 +46,6 @@ const StoryBoard = () => {
                             alt=''
                             title='add new image'
                         />
-
                     </div>
                 </div>
             </div>

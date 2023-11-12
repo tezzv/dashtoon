@@ -72,7 +72,7 @@ code {
 }
 
 .headBoard p {
-  margin-top: -10px;
+  margin-top: 8px;
 }
 
 @media (max-width: 768px) {
@@ -89,6 +89,11 @@ code {
   .loaderh{
     transform: scale(.5);
     width: 400px !important;
+  }
+
+  .sotryimg{
+    width: 100px;
+    height: 100px;
   }
 
   

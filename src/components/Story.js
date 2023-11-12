@@ -16,12 +16,12 @@ const Story = () => {
 
     return (
         <><div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', marginTop: '40px' }}>
-            <div className='storyNav' style={{ display: 'flex', width: '100vw', justifyContent: 'space-around' }}>
+            <div className='storyNav' >
                 <Link to='/' type="button" className=" backbtn1">Back</Link>
 
                 <div className='storyHeading' >Story Board</div>
 
-                <button className="btn btn-secondary " onClick={handlePrintAndDownload}>Download</button>
+                <button className="btn btn-secondary download1 " onClick={handlePrintAndDownload}>Download</button>
             </div>
 
             <div style={{ display: 'flex', width: '90vw', flexWrap: 'wrap', justifyContent: 'center', marginTop: '20px' }}>
